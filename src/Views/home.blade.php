@@ -19,17 +19,6 @@
 
 <div id="chatter" class="chatter_home">
 
-	<div id="chatter_hero">
-		<div id="chatter_hero_dimmer"></div>
-		<?php $headline_logo = Config::get('chatter.headline_logo'); ?>
-		@if( isset( $headline_logo ) && !empty( $headline_logo ) )
-			<img src="{{ Config::get('chatter.headline_logo') }}">
-		@else
-			<h1>@lang('chatter::intro.headline')</h1>
-			<p>@lang('chatter::intro.description')</p>
-		@endif
-	</div>
-
 	@if(config('chatter.errors'))
 		@if(Session::has('chatter_alert'))
 			<div class="chatter-alert alert alert-{{ Session::get('chatter_alert_type') }}">
